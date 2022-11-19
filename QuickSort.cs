@@ -15,6 +15,7 @@
 
             index = -1;
             index2 = -1;
+            System.Threading.Thread.Sleep(5);
         }
         static private int Partition(int[] arr, int left, int right)
         {
@@ -22,7 +23,8 @@
             int pivot = arr[left];
             for (int i = left + 1; i <= right; i++)
             {
-                System.Threading.Thread.Sleep(5);
+                //delay
+                System.Threading.Thread.Sleep(1);
                 if (arr[i] < pivot)
                 {
                     indx++;

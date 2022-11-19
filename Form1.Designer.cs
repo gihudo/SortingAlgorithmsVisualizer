@@ -89,14 +89,13 @@
             this.listBox1.ItemHeight = 20;
             this.listBox1.Items.AddRange(new object[] {
             "QuickSort",
-            "CocktailShaker_BubbleSort",
             "BubbleSort",
             "MergeSort",
             "SelectionSort",
             "InsertionSort"});
             this.listBox1.Location = new System.Drawing.Point(28, 124);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(239, 124);
+            this.listBox1.Size = new System.Drawing.Size(239, 104);
             this.listBox1.TabIndex = 5;
             // 
             // button2

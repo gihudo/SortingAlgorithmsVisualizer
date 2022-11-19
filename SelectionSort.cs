@@ -13,17 +13,17 @@
                 index = i;
                 for (int j = i + 1; j < arr.Length; j++)
                 {
-                    System.Threading.Thread.Sleep(5);
+                    //delay
+                    System.Threading.Thread.Sleep(1);
                     index2 = j;
                     if (arr[j] < arr[indexOfMin])
                         indexOfMin = j;
-
                 }
-
                 Swap(arr, i, indexOfMin);
             }
             index = -1;
-        }   
+            System.Threading.Thread.Sleep(5);
+        }
 
         static private void Swap(int[] arr, int i, int j)
         {

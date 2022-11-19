@@ -11,12 +11,10 @@ namespace SortingAlgorithms
         Graphics graphics;
         Random random = new Random();
         int[] arr;
-
         public Form1()
         {
             InitializeComponent();
         }
-
         float Map(float n, float start1, float stop1, float start2, float stop2)
         {
             return ((n- start1) / (stop1 - start1)) * (stop2 - start2) + start2;
@@ -91,10 +89,6 @@ namespace SortingAlgorithms
                     await Task.Run(() => QuickSort.Sort(arr, 0, arr.Length - 1));
                     break;
 
-                case "CocktailShaker_BubbleSort":
-                    await Task.Run(() => CocktailShaker_BubbleSort.Sort(arr));
-                    break;
-
                 case "BubbleSort": 
                     await Task.Run(() => BubbleSort.Sort(arr));
                     break;
@@ -115,7 +109,6 @@ namespace SortingAlgorithms
                     break;
             }
 
-
             button1.Enabled = true;
             button2.Enabled = true;
             numericUpDown1.Enabled = true;
@@ -131,12 +124,8 @@ namespace SortingAlgorithms
                     Display(QuickSort.index, QuickSort.index2);
                     break;
 
-                case "CocktailShaker_BubbleSort":
-                    Display(CocktailShaker_BubbleSort.index);
-                    break;
-
                 case "BubbleSort":
-                    Display(BubbleSort.index);
+                    Display(BubbleSort.index, BubbleSort.index2);
                     break;
 
                 case "SelectionSort":
@@ -154,12 +143,6 @@ namespace SortingAlgorithms
                 default:
                     break;
             }
-            
-            
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
         }
     }
 }

@@ -3,6 +3,7 @@
     static class BubbleSort
     {
         static public int index { get; set; } = -1;
+        static public int index2 { get; set; } = -1;
         static private void Swap(int[] arr, int i, int j)
         {
             int temp = arr[i];
@@ -14,14 +15,19 @@
         {
             for (int i = 0; i < arr.Length; i++)
             {
+                index = i;
                 for (int j = 0; j < arr.Length - 1; j++)
                 {
-                    System.Threading.Thread.Sleep(5);
+                    index2 = j;
+                    //delay
+                    System.Threading.Thread.Sleep(1);
                     if (arr[j] > arr[j + 1])
                         Swap(arr, j, j + 1);
                 }
             }
             index = -1;
+            index2 = -1;
+            System.Threading.Thread.Sleep(5);
         }
     }
 }

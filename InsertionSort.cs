@@ -11,13 +11,15 @@
                 index = i;
                 for (int j = i; j > 0 && arr[j - 1] > arr[j]; j--)
                 {
-                    System.Threading.Thread.Sleep(5);
+                    //delay
+                    System.Threading.Thread.Sleep(1);
                     index2 = j;
                     Swap(arr, j - 1, j);
                 }
             }
             index = -1;
             index2 = -1;
+            System.Threading.Thread.Sleep(5);
         }
 
         static private void Swap(int[] arr, int i, int j)

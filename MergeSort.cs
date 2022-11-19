@@ -14,6 +14,7 @@
             Merge(arr, begin, mid, end);
 
             index = -1;
+            System.Threading.Thread.Sleep(5);
         }
 
         static private void Merge(int[] arr, int left, int mid, int right)
@@ -32,7 +33,8 @@
 
             while(indexOfLeftArray < leftArr.Length && indexOfRightArray < rightArr.Length)
             {
-                System.Threading.Thread.Sleep(5);
+                //delay
+                System.Threading.Thread.Sleep(1);
                 if(leftArr[indexOfLeftArray] <= rightArr[indexOfRightArray])
                 {
                     arr[indexOfMergedArray] = leftArr[indexOfLeftArray];
@@ -49,7 +51,8 @@
             while(indexOfLeftArray < leftArr.Length)
             {
                 index = indexOfMergedArray;
-                System.Threading.Thread.Sleep(5);
+                //delay
+                System.Threading.Thread.Sleep(1);
 
                 arr[indexOfMergedArray] = leftArr[indexOfLeftArray];
                 indexOfLeftArray++;
@@ -59,7 +62,8 @@
             while (indexOfRightArray < rightArr.Length)
             {
                 index = indexOfMergedArray;
-                System.Threading.Thread.Sleep(5);
+                //delay
+                System.Threading.Thread.Sleep(1);
 
                 arr[indexOfMergedArray] = rightArr[indexOfRightArray];
                 indexOfRightArray++;
